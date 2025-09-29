@@ -61,7 +61,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Magical fairy tale colors
+				'fairy-pink': '#FFB5BA',
+				'fairy-yellow': '#FEAA7',
+				'fairy-blue': '#74B9FF',
+				'fairy-purple': '#6C5CE7',
+				'fairy-lavender': '#D6BCFA',
+				'soft-peach': '#FDE1D3'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +91,30 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'sparkle': {
+					'0%, 100%': { opacity: '0', transform: 'scale(0)' },
+					'50%': { opacity: '1', transform: 'scale(1)' }
+				},
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 3s ease-in-out infinite',
+				'sparkle': 'sparkle 2s ease-in-out infinite',
+				'fade-in': 'fade-in 0.6s ease-out'
+			},
+			fontFamily: {
+				'fredoka': ['Fredoka One', 'cursive'],
+				'open-sans': ['Open Sans', 'sans-serif']
 			}
 		}
 	},
